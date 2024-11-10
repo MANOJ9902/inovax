@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/4351534.jpg') }}'); /* Flask static image path */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 20%;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        a {
+            font-size: 1.2em;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for contrast */
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Pet Care Assistant</h1>
+    <a href="{{ url_for('chatbot_interface') }}">Chat with the Bot</a><br>
+    <a href="{{ url_for('disease') }}">Disease Detection</a>
+</body>
+</html>
